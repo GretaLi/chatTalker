@@ -332,6 +332,10 @@ $(".btn-s").click(function (e) {
 - 邊框陰影: .box-shadow
 - 大標題: .title
 
+### Jquery 撞牆心得
+
+從一開始 CDN 載入就直接撞牆，好險最後用本地端方法有成功連上，不然我可能會放棄挑戰 Lv2。按鈕的文字寫入功能卡關了一個晚上，甚至連睡覺都在想要怎麼寫，不斷嘗試不同方法想讓我的程式不要落落長，想到可以用按鈕的序號來取陣列的值，我原本寫 .indexof( ); 但console 一直無情地告訴我 Jquery 沒這個語法，最後解題的關鍵是 .index( ); 這個 Jquery 的索引的寫法。只能說，初學者不要偷懶要好好看[官方文件](https://api.jquery.com/index/)啊~
+
 ## What’s Next?
 
 - 練習使用 Bootstrap 來製作第三個版本，從中學習 utility 的設計方法

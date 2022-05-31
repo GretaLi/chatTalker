@@ -63,9 +63,7 @@ sub{
 
 ### container 外容器設定
 
-1366 - 139 - 139 + 16 + 16 = 1120 px
-
-max-width: 1120px;
+- 1366 - 139 - 139 + 16 + 16 = 1120 px
 
 ```css
 .container {

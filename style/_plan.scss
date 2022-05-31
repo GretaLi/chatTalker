@@ -1,0 +1,299 @@
+//全域調整//
+header,
+section {
+  margin-bottom: 60px;
+}
+
+.title {
+  margin-bottom: 32px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item {
+  margin-bottom: 24px;
+}
+
+//區塊調整//
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-bottom: 2px solid $secondary;
+  background-color: #fff;
+  .logo img {
+    height: 24px;
+  }
+}
+
+.banner-plan {
+  position: relative;
+  height: 100vh;
+  background: url(../image/banner_sm.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 74px;
+  background-size: 100%;
+
+  &::before {
+    position: absolute;
+    z-index: -10;
+    content: " ";
+    height: 85vh;
+    width: 100%;
+    background-color: #f7f9fd;
+    border-radius: 0 0 0 150px;
+  }
+  .content {
+    padding: 48px 4px;
+    h2 {
+      padding-bottom: 16px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+}
+
+//彈性選擇
+.plan-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  .btn {
+    margin: 0px 3px 12px;
+  }
+}
+
+.plan-card-item {
+  padding: 16px 16px 24px;
+  text-align: center;
+  h3 {
+    margin: 0 -16px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid $divider-color;
+  }
+  p {
+    padding: 24px 0;
+    font-size: 16px;
+  }
+  ul {
+    margin: 24px 0;
+    text-align: left;
+    li {
+      font-size: 14px;
+      padding: 8px 0;
+    }
+    img {
+      margin-right: 16px;
+    }
+  }
+}
+
+.plan-card-item-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-size: 24px;
+  }
+  .user-num,
+  .price {
+    margin: 0 6px;
+    padding: 16px 0;
+    width: 139px;
+    background-color: $bg-color;
+    border-radius: 12px;
+    text-align: center;
+    p {
+      display: inline-block;
+      padding: 0;
+      font-family: "Comfortaa", "Noto Sans TC", sans-serif;
+      font-size: 28px;
+      line-height: 1;
+    }
+    small,
+    sub {
+      display: inline-block;
+      padding: 0;
+      font-size: 12px;
+    }
+    small {
+      margin-bottom: 8px;
+    }
+  }
+  .user-num {
+    p,
+    sub {
+      color: $primary;
+    }
+  }
+}
+
+//常見問題
+.faq-list {
+  padding: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  p {
+    display: none;
+    padding: 16px 0 8px;
+    line-height: 2;
+    color: $text-color-light;
+  }
+  h3 {
+    transition: all 0.5s;
+  }
+}
+
+.faq-list-open {
+  font-weight: bold;
+  color: $primary;
+}
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  background: url(../image/icon_plus.svg) center center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  transition: all 0.5s;
+}
+
+.faq-icon-minus {
+  width: 24px;
+  height: 24px;
+  background: url(../image/icon_minus.svg) center center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+//背景球球
+.plan {
+  position: relative;
+}
+.ball-4 {
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: -108px;
+  width: 204px;
+  height: 204px;
+  background: url(../image/ball03.svg);
+  background-size: 204px;
+}
+
+@media (min-width: 768px) {
+  .banner-plan {
+    .content {
+      padding: 92px 0px;
+      h2 {
+        font-size: 48px;
+      }
+    }
+  }
+  .title {
+    margin-bottom: 48px;
+    font-size: 32px;
+  }
+
+  //彈性選擇//w768px
+  .plan-tabs {
+    margin-bottom: 42px;
+    .btn {
+      padding: 12px 32px;
+      margin: 0 8px 12px;
+    }
+  }
+  .plan-card {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  .plan-card-item {
+    width: 48%;
+    p {
+      padding: 32px 0;
+    }
+    ul {
+      margin: 32px 0;
+    }
+  }
+  .plan-card-item-block {
+    span {
+      font-size: 29px;
+    }
+    .user-num,
+    .price {
+      p {
+        font-size: 32px;
+      }
+    }
+  }
+
+  //常見問題//w768px
+  .faq-wrap {
+    width: 83.1%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  header,
+  section {
+    margin-bottom: 100px;
+  }
+  nav {
+    padding: 24px 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    background: none;
+    border: none;
+    .logo img {
+      height: 40px;
+    }
+  }
+  .banner-plan {
+    height: 80vh;
+    background: url(../image/banner.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: right top;
+
+    &::before {
+      height: 80%;
+      border-radius: 0 0 0 300px;
+    }
+  }
+
+  //彈性選擇//w992px
+  .plan-card {
+    width: 83.1%;
+  }
+  .plan-card-item-block {
+    .user-num,
+    .price {
+      margin: 0 20px;
+    }
+  }
+
+  //背景球球//w992px
+  .ball-4 {
+    top: 40%;
+    left: 0px;
+    width: 94px;
+    height: 361px;
+    background-size: 361px;
+    background-position-x: -267px;
+    background-repeat: no-repeat;
+  }
+}

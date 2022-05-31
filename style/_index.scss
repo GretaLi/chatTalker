@@ -1,0 +1,437 @@
+//通用設定//
+header,
+section {
+  margin-bottom: 60px;
+}
+
+.container {
+  max-width: 1120px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 32px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  & + p {
+    margin-top: -16px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.item {
+  margin-bottom: 24px;
+}
+
+//區塊設定//
+//header
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-bottom: 2px solid $secondary;
+  background-color: #fff;
+  .logo img {
+    height: 24px;
+  }
+}
+
+.banner {
+  height: 100vh;
+  background: url(../image/home.svg), url(../image/bg_home_sm.svg);
+  background-repeat: no-repeat;
+  background-position: center 90%;
+  background-size: 90%, 90%;
+  .content {
+    padding: 32px 0 32px;
+    h2 {
+      color: $primary;
+      font-weight: bold;
+    }
+    span {
+      padding: 8px 0 16px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+}
+
+// 三大平台
+.platform-card-item {
+  text-align: center;
+  img {
+    width: 60px;
+  }
+  h3 {
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  p {
+    color: $text-color-light;
+  }
+}
+
+//任何角色
+.role {
+  position: relative;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.role-card-item {
+  width: 260px;
+  text-align: center;
+  img {
+    border-radius: 12px 12px 0 0;
+  }
+  h3 {
+    padding: 16px 0;
+    font-weight: bold;
+    color: $primary;
+  }
+  p {
+    padding: 0 16px 24px;
+  }
+}
+
+//快速了解
+.service {
+  .content {
+    text-align: center;
+    margin-bottom: 32px;
+    p {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card-item {
+  padding: 32px 41px 48px 24px;
+  width: 230px;
+  & > div {
+    display: inline-block;
+    padding: 16px;
+    border-radius: 50%;
+  }
+  h3 {
+    padding: 24px 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+//好評如潮
+
+.review .container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.review-card-item {
+  position: relative;
+  margin-top: 88px;
+  padding: 48px 16px 16px;
+  & > img {
+    position: absolute;
+    top: -56px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  p {
+    padding-bottom: 16px;
+    border-bottom: 1px solid $divider-color;
+    & + span {
+      font-weight: bold;
+      padding: 16px 0 8px;
+    }
+  }
+
+  span + div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.review-star {
+  font-size: 0px;
+  img {
+    padding: 4px;
+  }
+}
+
+.review-card-pagination {
+  font-size: 0;
+  text-align: center;
+  div {
+    display: inline-block;
+    margin: 0 4px 0;
+    width: 10px;
+    height: 10px;
+    background-color: $divider-color;
+    border-radius: 50px;
+  }
+
+  .active {
+    width: 16px;
+    background-color: $secondary;
+  }
+}
+
+//頁尾
+.bg-footer {
+  padding: 293px 0 60px;
+  background: url(../image/footer_sm.svg);
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  text-align: center;
+  h3 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+.copyright {
+  padding: 16px 0;
+  background-color: $bg-color;
+  text-align: center;
+}
+
+//背景球球
+.ball-1 {
+  position: absolute;
+  z-index: -2;
+  bottom: -202px;
+  width: 49px;
+  height: 126px;
+  background: url(../image/ball01.svg);
+  background-size: 126px;
+  background-position: -77px;
+  background-repeat: no-repeat;
+}
+
+.ball-2 {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  z-index: -2;
+  width: 88px;
+  height: 135px;
+  background: url(../image/ball02.svg);
+  background-size: 135px;
+  background-repeat: no-repeat;
+}
+
+.ball-3 {
+  position: absolute;
+  top: -90px;
+  left: -100px;
+  z-index: -2;
+  width: 153px;
+  height: 153px;
+  background: url(../image/ball03.svg);
+  background-size: 153px;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 576px) {
+  .banner {
+    background-size: 60%, 60%; //調整首頁背景
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-bottom: 48px;
+    font-size: 32px;
+    & + p {
+      font-size: 20px;
+      margin-top: -32px;
+      margin-bottom: 48px;
+    }
+  }
+  .banner {
+    .content {
+      h2 {
+        font-size: 18px;
+      }
+      span {
+        font-size: 48px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  //三大平台//w768px
+  .platform-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .platform-card-item {
+    width: 50%;
+    h3 {
+      padding: 24px;
+      font-size: 24px;
+    }
+  }
+
+  //任何角色//w768px
+  .role-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .role-card-item {
+    margin: 0px 8px 16px;
+  }
+
+  //快速了解//w768px
+  .service-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .service-card-item {
+    margin: 0 24px 28px;
+  }
+
+  //好評如潮//w768px
+  .review-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .review-card-item {
+    width: 60%;
+    padding: 48px 32px 24px;
+  }
+
+  //頁尾背景//w768px
+  .bg-footer {
+    background: url(../image/home_footer.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  header,
+  section {
+    margin-bottom: 100px;
+  }
+
+  nav {
+    padding: 24px 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    background: none;
+    border: none;
+    .logo img {
+      height: 40px;
+    }
+  }
+  .banner {
+    height: 100vh;
+    background: url(../image/home.svg), url(../image/bg_home.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 50%, right top;
+    background-size: 40%, auto;
+  }
+  .banner .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  //三大平台//w992px
+  .platform-card-item {
+    width: 33.33%;
+  }
+
+  //快速了解//w992px
+  .service {
+    padding-top: 24px;
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      min-width: 400px;
+      h2,
+      p {
+        text-align: left;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .service-card {
+    margin-left: -24px;
+    justify-content: flex-start;
+  }
+
+  //好評如潮//w992px
+  .review-card {
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .review-card-item {
+    // width: 352px;
+    width: 32%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  //背景球球//w992px
+  .ball-1 {
+    width: 138px;
+    height: 360px;
+    background-size: 360px;
+    background-position: -222px 0;
+  }
+  .ball-2 {
+    width: 210px;
+    height: 310px;
+    bottom: -180px;
+    background-size: 310px;
+  }
+  .ball-3 {
+    width: 150px;
+    height: 150px;
+  }
+}

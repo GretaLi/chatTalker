@@ -30,7 +30,8 @@ $(document).ready(function () {
   });
 
   // 常見問題 slideToggle
-  $(".faq-list").click(function () {
+  $(".faq-list").click(function (e) {
+    e.preventDefault();
     $(this).find("h3").toggleClass("faq-list-open"),
       $(this).find(".faq-list-p").slideToggle(),
       $(this).find(".faq-icon").toggleClass("faq-icon-minus");

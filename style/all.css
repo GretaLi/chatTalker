@@ -1,3 +1,138 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 *,
 *::after,
 *::before {
@@ -84,6 +219,10 @@ ul {
   -webkit-user-select: none;
   -moz-user-select: none;
 }
+.btn-scroll-top:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
 
 @media (min-width: 768px) {
   .btn-scroll-top {
@@ -155,7 +294,7 @@ nav .logo img {
   color: #56c4c5;
   font-weight: bold;
 }
-.banner .content span {
+.banner .content h2 + p {
   padding: 8px 0 16px;
   font-size: 32px;
   font-weight: bold;
@@ -239,7 +378,10 @@ nav .logo img {
 .review-card-item {
   position: relative;
   margin-top: 88px;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 48px 16px 16px;
+  min-width: 335px;
 }
 .review-card-item > img {
   position: absolute;
@@ -272,17 +414,22 @@ nav .logo img {
   font-size: 0;
   text-align: center;
 }
-.review-card-pagination div {
+.review-card-pagination button {
   display: inline-block;
-  margin: 0 4px 0;
+  margin-left: 10px;
+  padding: 0;
   width: 10px;
   height: 10px;
   background-color: #dddddd;
-  border-radius: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
-.review-card-pagination .active {
-  width: 16px;
+.review-card-pagination .active-yellow {
+  width: 10px;
   background-color: #ffd153;
+  box-shadow: 3px 0px #ffd153, 2px 0px #ffd153, -3px 0px #ffd153, -2px 0px #ffd153;
+  transition: all 0.5s;
 }
 
 .bg-footer {
@@ -341,11 +488,6 @@ nav .logo img {
   background-repeat: no-repeat;
 }
 
-@media (min-width: 576px) {
-  .banner {
-    background-size: 60%, 60%;
-  }
-}
 @media (min-width: 768px) {
   .title {
     margin-bottom: 48px;
@@ -357,10 +499,13 @@ nav .logo img {
     margin-bottom: 48px;
   }
 
+  .banner {
+    background-size: 50vh, 50vh;
+  }
   .banner .content h2 {
     font-size: 18px;
   }
-  .banner .content span {
+  .banner .content h2 + p {
     font-size: 48px;
   }
   .banner .content p {
@@ -410,7 +555,7 @@ nav .logo img {
   }
 
   .review-card-item {
-    width: 60%;
+    width: 352px;
     padding: 48px 32px 24px;
   }
 
@@ -442,8 +587,8 @@ section {
     height: 100vh;
     background: url(../image/home.svg), url(../image/bg_home.svg);
     background-repeat: no-repeat;
-    background-position: 90% 50%, right top;
-    background-size: 40%, auto;
+    background-position: 83% 50%, right top;
+    background-size: 60vh, 110vh;
   }
 
   .banner .content {
@@ -463,12 +608,10 @@ section {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
   }
   .service .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    text-align: left;
     min-width: 400px;
   }
   .service .content h2,
@@ -514,6 +657,7 @@ section {
   .ball-3 {
     width: 150px;
     height: 150px;
+    background-size: 150px;
   }
 }
 header,
@@ -779,7 +923,7 @@ section {
     height: 80vh;
     background: url(../image/banner.svg);
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: 100vh;
     background-position: right top;
   }
   .banner-plan::before {

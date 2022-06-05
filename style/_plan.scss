@@ -201,6 +201,7 @@ nav {
       }
     }
   }
+
   .title {
     margin-bottom: 48px;
     font-size: 32px;
@@ -262,11 +263,12 @@ nav {
       height: 40px;
     }
   }
+
   .banner-plan {
     height: 80vh;
     background: url(../image/banner.svg);
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: 100vh;
     background-position: right top;
 
     &::before {

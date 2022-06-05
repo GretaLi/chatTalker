@@ -55,11 +55,11 @@ nav {
     h2 {
       color: $primary;
       font-weight: bold;
-    }
-    span {
-      padding: 8px 0 16px;
-      font-size: 32px;
-      font-weight: bold;
+      & + p {
+        padding: 8px 0 16px;
+        font-size: 32px;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -139,7 +139,6 @@ nav {
 }
 
 //好評如潮
-
 .review .container {
   padding-left: 20px;
   padding-right: 20px;
@@ -148,7 +147,10 @@ nav {
 .review-card-item {
   position: relative;
   margin-top: 88px;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 48px 16px 16px;
+  min-width: 335px;
   & > img {
     position: absolute;
     top: -56px;
@@ -181,18 +183,25 @@ nav {
 .review-card-pagination {
   font-size: 0;
   text-align: center;
-  div {
+  button {
     display: inline-block;
-    margin: 0 4px 0;
+    margin-left: 10px;
+    padding: 0;
     width: 10px;
     height: 10px;
     background-color: $divider-color;
-    border-radius: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
   }
 
-  .active {
-    width: 16px;
+  .active-yellow {
+    width: 10px;
     background-color: $secondary;
+    box-shadow: //用影分身讓點點不位移
+      3px 0px $secondary, 2px 0px $secondary, -3px 0px $secondary,
+      -2px 0px $secondary;
+    transition: all 0.5s;
   }
 }
 
@@ -254,12 +263,6 @@ nav {
   background-repeat: no-repeat;
 }
 
-@media (min-width: 576px) {
-  .banner {
-    background-size: 60%, 60%; //調整首頁背景
-  }
-}
-
 @media (min-width: 768px) {
   .title {
     margin-bottom: 48px;
@@ -271,12 +274,13 @@ nav {
     }
   }
   .banner {
+    background-size: 50vh, 50vh; //調整首頁背景
     .content {
       h2 {
         font-size: 18px;
-      }
-      span {
-        font-size: 48px;
+        & + p {
+          font-size: 48px;
+        }
       }
       p {
         font-size: 20px;
@@ -327,7 +331,7 @@ nav {
     justify-content: center;
   }
   .review-card-item {
-    width: 60%;
+    width: 352px;
     padding: 48px 32px 24px;
   }
 
@@ -360,8 +364,8 @@ nav {
     height: 100vh;
     background: url(../image/home.svg), url(../image/bg_home.svg);
     background-repeat: no-repeat;
-    background-position: 90% 50%, right top;
-    background-size: 40%, auto;
+    background-position: 83% 50%, right top;
+    background-size: 60vh, 110vh;
   }
   .banner .content {
     position: absolute;
@@ -381,12 +385,14 @@ nav {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
+      align-items: center;
     }
     .content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+      // display: flex; //助教建議: .content 可以不用 flex，在外層加 align-items: center 就可以置中了
+      // flex-direction: column;
+      // align-items: flex-start;
+      // justify-content: center;
+      text-align: left; //讓「方案費用」按鈕靠左
       min-width: 400px;
       h2,
       p {
@@ -411,7 +417,6 @@ nav {
     margin-right: -16px;
   }
   .review-card-item {
-    // width: 352px;
     width: 32%;
     margin-right: auto;
     margin-left: auto;
@@ -433,5 +438,6 @@ nav {
   .ball-3 {
     width: 150px;
     height: 150px;
+    background-size: 150px;
   }
 }

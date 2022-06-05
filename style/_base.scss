@@ -85,6 +85,10 @@ ul {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.3s;
+  }
 }
 
 @media (min-width: 768px) {
